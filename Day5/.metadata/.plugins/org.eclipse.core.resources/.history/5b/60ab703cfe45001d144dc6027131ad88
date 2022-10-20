@@ -1,0 +1,95 @@
+//============================================================================
+// Name        : Maneuver.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include <cmath>
+#include<fstream>
+#include <string>
+#include "Maneuver.h"
+
+Maneuver::Maneuver()
+{
+dPosDifference = 0.02;
+bIsRunning = false;
+}
+
+void Maneuver::LogList(string Dateiname)
+{
+	ofstream file(Dateiname, ios::out|ios::trunc);
+	for(auto it=Coordlist.begin(); it!=Coordlist.end(); it++){
+		file<<it->dX<<'\t'<<it->dY<< endl;
+	}
+	file.close();
+}
+
+void Maneuver::CalcCircle(double dRadius, double dSpeed, double dTimestep)
+{
+	Coordlist.clear();
+	int n = (int)((2*M_PI)/(dSpeed/dRadius*dTimestep));
+	double x,y,temp;
+	for(int counter=1; counter<n; counter++)
+	{
+		temp = counter * dSpeed * dTimestep / dRadius;
+		x = dRadius * sin(temp);
+		y = dRadius * (1 - cos(temp));
+		Coordlist.push_back(Coord(x,y,dSpeed));
+	}
+
+	LogList("LogFileCircle.txt");
+}
+
+void Maneuver::CalcEight(double dRadius, double dSpeed, double dTimestep)
+{
+	Coordlist.clear();
+	int n = (int)((2*M_PI)/(dSpeed/dRadius*dTimestep));
+	double x,y,temp;
+
+	for(int counter=1; counter<n; counter++)
+	{
+		temp = counter * dSpeed * dTimestep / dRadius;
+		x = dRadius * sin(temp);
+		y = dRadius * (1 - cos(temp));
+		Coordlist.push_back(Coord(x,y,dSpeed));
+	}
+
+	for(int counter=1; counter<n; counter++)
+	{
+		temp = counter * dSpeed * dTimestep / dRadius;
+		x = dRadius * sin(temp);
+		y = -dRadius * (1 - cos(temp));
+		Coordlist.push_back(Coord(x,y,dSpeed));
+	}
+	LogList("LogFileEight.txt");
+
+}
+
+bool Maneuver::isRunning()
+{
+return bIsRunning;
+}
+
+void Maneuver::Start()
+{
+iter = Coordlist.begin();
+bIsRunning = true;
+}
+
+void Maneuver::Stop()
+{
+	bIsRunning = false;
+}
+
+void Maneuver::Proceed()
+{
+	bIsRunning = true;
+}
+
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Keyboardcontrol/src/Keyboardcontrol.cpp&apos; to &apos;KeyboardC.cpp&apos;" description="Rename resource &apos;Keyboardcontrol.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Keyboardcontrol.cpp" name="KeyboardC.cpp" stamp="1664961192976" updateReferences="true"/>
+</session>

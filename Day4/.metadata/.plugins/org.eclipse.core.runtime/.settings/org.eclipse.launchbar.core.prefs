@@ -1,0 +1,9 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Ausnahme,org.eclipse.launchbar.core.descriptorType.default\:Datei,org.eclipse.launchbar.core.descriptorType.default\:Fakultaet,org.eclipse.launchbar.core.descriptorType.default\:Fibonacci,org.eclipse.launchbar.core.descriptorType.default\:Liste,org.eclipse.launchbar.core.descriptorType.default\:my_ncurses,org.eclipse.launchbar.core.descriptorType.default\:test,org.eclipse.launchbar.core.descriptorType.default\:Regler,org.eclipse.launchbar.core.descriptorType.default\:Keyboardcontrol
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Keyboardcontrol/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Keyboardcontrol/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Regler/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Regler/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

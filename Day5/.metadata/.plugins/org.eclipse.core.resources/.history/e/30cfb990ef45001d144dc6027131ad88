@@ -1,0 +1,26 @@
+//============================================================================
+// Name        : Maneuver.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include <cmath>
+#include "Maneuver.h"
+
+void Maneuver::CalcCircle(double dRadius, double dSpeed, double dTimestep){
+	Coordlist.clear();
+	int n = (int)((2*M_PI)/(dSpeed/dRadius*dTimestep));
+	double x,y,temp;
+	for(int counter=1; counter<n; counter++){
+		temp = counter * dSpeed * dTimestep / dRadius;
+		x = dRadius * sin(temp);
+		y = dRadius * (1 - cos(temp));
+		Coordlist.push_back(Coord(x,y,dSpeed));
+	}
+
+
+}

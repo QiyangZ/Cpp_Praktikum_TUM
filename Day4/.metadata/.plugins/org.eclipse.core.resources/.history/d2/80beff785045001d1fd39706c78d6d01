@@ -1,0 +1,20 @@
+//============================================================================
+// Name        : Regler.cpp
+// Author      : Qiyang
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include "PIDController.h"
+#include <fstream>
+#include <string>
+
+void read_file(string Dateiname)
+int main()
+{
+PIDController obj(1000,10,10,0.5);
+return 0;
+}

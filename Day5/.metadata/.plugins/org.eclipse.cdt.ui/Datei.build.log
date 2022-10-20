@@ -1,0 +1,15 @@
+17:16:28 **** Build of configuration Debug for project Datei ****
+make all 
+Building file: ../src/Datei.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Datei.d" -MT"src/Datei.o" -o "src/Datei.o" "../src/Datei.cpp"
+Finished building: ../src/Datei.cpp
+ 
+Building target: Datei
+Invoking: GCC C++ Linker
+g++  -o "Datei"  ./src/Datei.o   
+Finished building target: Datei
+ 
+
+17:16:31 Build Finished. 0 errors, 0 warnings. (took 3s.586ms)
+

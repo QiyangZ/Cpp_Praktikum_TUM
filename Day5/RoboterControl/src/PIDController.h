@@ -1,0 +1,25 @@
+/*
+ * PIDcontroller.h
+ *
+ *  Created on: 06.10.2022
+ *      Author: pi
+ */
+
+#ifndef PIDCONTROLLER_H_
+#define PIDCONTROLLER_H_
+
+class PIDController
+{
+private:
+	double dKi,dKp,dKd,dTa,dEsum,deold,dU;
+
+public:
+	PIDController(double Kp, double Ki, double Kd, double Ta);
+    ~PIDController();
+    void CauculateU(double dW, double dY);
+    double getU();
+};
+
+
+
+#endif /* PIDCONTROLLER_H_ */

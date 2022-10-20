@@ -1,0 +1,38 @@
+//============================================================================
+// Name        : Keyboardcontrol.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include "KeyboardC.h"
+#include "ncurses.h"
+#include <string>
+
+KeyboardControl::KeyboardControl(){}
+
+KeyboardControl::~KeyboardControl(){}
+
+void KeyboardControl::Communicate()
+{
+//Initialierung:
+	initscr();
+	nodelay(stdscr,TRUE);
+	noecho();
+
+	char chZeichen =getch();
+	while(chZeichen != 'q')
+	{
+	chZeichen = getch();
+	if (chZeichen != -1)
+	{
+	clear();
+	printw("Eingabe ist: %c",chZeichen);
+	}
+	//else
+	//{break;}
+	}
+}

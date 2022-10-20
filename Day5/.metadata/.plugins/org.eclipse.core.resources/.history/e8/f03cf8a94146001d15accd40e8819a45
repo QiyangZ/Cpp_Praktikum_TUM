@@ -1,0 +1,12 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 07.10.2022
+ *      Author: pi
+ */
+
+#include <iostream>
+#include "RoboterControl.h"
+
+
+

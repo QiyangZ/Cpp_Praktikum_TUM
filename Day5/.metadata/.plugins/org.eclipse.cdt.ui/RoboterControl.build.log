@@ -1,0 +1,15 @@
+16:50:10 **** Incremental Build of configuration Debug for project RoboterControl ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: RoboterControl
+Invoking: GCC C++ Linker
+g++  -o "RoboterControl"  ./src/InterfaceSIM.o ./src/Maneuver.o ./src/PIDController.o ./src/PosEstimation.o ./src/RoboterControl.o ./src/main.o   -lncurses -lrt -ljsoncpp
+Finished building target: RoboterControl
+ 
+
+16:50:14 Build Finished. 0 errors, 0 warnings. (took 3s.822ms)
+

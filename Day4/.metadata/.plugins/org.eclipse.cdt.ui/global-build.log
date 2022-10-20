@@ -1,0 +1,27 @@
+16:29:32 **** Incremental Build of configuration Debug for project Keyboardcontrol ****
+make all 
+Building file: ../src/InterfaceSIM.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InterfaceSIM.d" -MT"src/InterfaceSIM.o" -o "src/InterfaceSIM.o" "../src/InterfaceSIM.cpp"
+Finished building: ../src/InterfaceSIM.cpp
+ 
+Building file: ../src/KeyboardC.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/KeyboardC.d" -MT"src/KeyboardC.o" -o "src/KeyboardC.o" "../src/KeyboardC.cpp"
+Finished building: ../src/KeyboardC.cpp
+ 
+Building file: ../src/PIDController.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/PIDController.d" -MT"src/PIDController.o" -o "src/PIDController.o" "../src/PIDController.cpp"
+Finished building: ../src/PIDController.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: Keyboardcontrol
+Invoking: GCC C++ Linker
+g++  -o "Keyboardcontrol"  ./src/InterfaceSIM.o ./src/KeyboardC.o ./src/PIDController.o ./src/main.o   -lncurses -lrt -ljsoncpp
+Finished building target: Keyboardcontrol
+ 

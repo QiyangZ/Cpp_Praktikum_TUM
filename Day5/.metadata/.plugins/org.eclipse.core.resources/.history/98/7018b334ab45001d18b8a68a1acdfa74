@@ -1,0 +1,18 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 06.10.2022
+ *      Author: pi
+ */
+#include <iostream>
+using namespace std;
+#include "PosEstimation.h"
+#include <string>
+#include <fstream>
+
+void read_file(string)
+{
+
+}
+
+

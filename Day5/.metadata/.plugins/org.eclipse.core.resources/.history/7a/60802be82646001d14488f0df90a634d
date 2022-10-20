@@ -1,0 +1,28 @@
+//============================================================================
+// Name        : RoboterControl.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include "ncurses.h"
+#include "RoboterControl.h"
+#include "PIDController.h"
+#include "Maneuver.h"
+#include "PosEstimation.h"
+
+RoboterControl::RoboterControl():motorR(500.0,100.0,0.0,0.04), motorL(500.0,100.0,0.0,0.04)
+{
+//	interface.Initialize(0.04, RoboterControl::transferFunction);
+	RoboterControl::transferPointer = this;
+//	motorR = PIDController(500.0,100.0,0.0,0.04);
+//	motorL = PIDController(500.0,100.0,0.0,0.04);
+	bIsActive = false;
+}
+
+
+
+

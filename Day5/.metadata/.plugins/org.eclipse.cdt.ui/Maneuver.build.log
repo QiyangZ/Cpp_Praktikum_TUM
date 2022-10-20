@@ -1,0 +1,20 @@
+10:29:04 **** Build of configuration Debug for project Maneuver ****
+make all 
+Building file: ../src/Maneuver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Maneuver.d" -MT"src/Maneuver.o" -o "src/Maneuver.o" "../src/Maneuver.cpp"
+Finished building: ../src/Maneuver.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: Maneuver
+Invoking: GCC C++ Linker
+g++  -o "Maneuver"  ./src/Maneuver.o ./src/main.o   
+Finished building target: Maneuver
+ 
+
+10:29:09 Build Finished. 0 errors, 0 warnings. (took 4s.602ms)
+

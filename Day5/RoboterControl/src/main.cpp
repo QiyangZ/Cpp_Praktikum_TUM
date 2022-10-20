@@ -1,0 +1,30 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 07.10.2022
+ *      Author: pi
+ */
+
+#include <iostream>
+#include "RoboterControl.h"
+#include <fstream>
+#include <vector>
+//#include "KeyboardControl.h"
+#include "PIDController.h"
+#include "PosEstimation.h"
+#include "Maneuver.h"
+#include "RoboterControl.h"
+
+int main()
+{
+RoboterControl beispiel;
+beispiel.Communicate();
+Maneuver maneuver;
+//maneuver.CalcCircle(2.0,0.3,0.04);
+//maneuver.CalcEight(2.0,0.4,0.04);
+return 0;
+}
+
+
+
+

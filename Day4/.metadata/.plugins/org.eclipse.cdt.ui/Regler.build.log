@@ -1,0 +1,6 @@
+10:39:28 **** Incremental Build of configuration Debug for project Regler ****
+make all 
+make: Für das Ziel „all“ ist nichts zu tun.
+
+10:39:29 Build Finished. 0 errors, 0 warnings. (took 1s.624ms)
+

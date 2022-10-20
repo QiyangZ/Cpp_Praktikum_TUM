@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Regler/src/PIDcontroller.h&apos; to &apos;PIDController.h&apos;" description="Rename resource &apos;PIDcontroller.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/PIDcontroller.h" name="PIDController.h" stamp="1665011124380" updateReferences="true"/>
+</session>

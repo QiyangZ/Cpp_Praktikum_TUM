@@ -1,0 +1,22 @@
+/*
+ * KeyboardC.h
+ *
+ *  Created on: 04.10.2022
+ *      Author: pi
+ */
+
+#ifndef KEYBOARDC_H_
+#define KEYBOARDC_H_
+
+class KeyboardControl
+{
+public:
+	void Communiate();
+	void Step();
+private:
+	double speed[2];
+};
+
+
+
+#endif /* KEYBOARDC_H_ */

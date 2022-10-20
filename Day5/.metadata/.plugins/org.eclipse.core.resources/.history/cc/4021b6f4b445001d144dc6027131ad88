@@ -1,0 +1,34 @@
+/*
+ * Maneuver.h
+ *
+ *  Created on: 06.10.2022
+ *      Author: pi
+ */
+
+#ifndef MANEUVER_H_
+#define MANEUVER_H_
+using namespace std;
+#include <list>
+
+class Maneuver
+{
+private:
+	struct Coord
+	{
+		double dX,dY,dV;
+		Coord(double x, double y, double v)
+		{
+			dX = x;
+			dY = y;
+			dV = v;
+		}
+	};
+
+	list<Coord> Coordlist;
+
+
+};
+
+
+
+#endif /* MANEUVER_H_ */

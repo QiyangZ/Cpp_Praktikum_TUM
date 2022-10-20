@@ -1,0 +1,112 @@
+//============================================================================
+// Name        : Keyboardcontrol.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+#include "KeyboardC.h"
+#include "ncurses.h"
+#include <string>
+
+KeyboardControl::pFfunction(){};
+KeyboardControl::KeyboardControl()
+{
+m_sollspeeds[0] = 0;
+m_sollspeeds[1] = 0;
+schnittstelle.Initialize(0.04,pFunction);
+}
+
+KeyboardControl::~KeyboardControl(){}
+
+void KeyboardControl::Communicate()
+{
+//Initialisierung:
+	initscr();
+	nodelay(stdscr,TRUE);
+	noecho();
+
+	char chZeichen =getch();
+	while(chZeichen != 'q')
+	{
+	chZeichen = getch();
+	if (chZeichen != -1)
+	{
+		switch(chZeichen)
+		{
+		case 'w':
+			m_sollspeeds[0] += 0.01;
+			m_sollspeeds[1] += 0.01;
+			for (int i=1; i<0 ; i--)
+			{
+			if (m_sollspeeds[i]>0.5)
+			{m_sollspeeds[i] = 0.5;}
+			}
+			break;
+
+		case 's':
+			m_sollspeeds[0] -= 0.01;
+			m_sollspeeds[1] -= 0.01;
+			for (int i=1; i<0 ; i--)
+			{
+			if (m_sollspeeds[i]< -0.5)
+			{m_sollspeeds[i] = -0.5;}
+			}
+			break;
+
+		case 'a':
+			m_sollspeeds[0] += 0.005;
+			m_sollspeeds[1] -= 0.005;
+			if (m_sollspeeds[0] > 0.5)
+				{m_sollspeeds[0]=0.5;}
+			if (m_sollspeeds[1] < -0.5)
+				{m_sollspeeds[1]= -0.5;}
+			break;
+
+		case 'd':
+			m_sollspeeds[0] -= 0.005;
+			m_sollspeeds[1] += 0.005;
+			if (m_sollspeeds[0] < -0.5)
+				{m_sollspeeds[0]= -0.5;}
+			if (m_sollspeeds[1] > 0.5)
+				{m_sollspeeds[1]= 0.5;}
+			break;
+
+		case 'b':
+			m_sollspeeds[0] = 0;
+			m_sollspeeds[1] = 0;
+			break;
+
+		case 'q':
+//			m_sollspeeds[0] = 0;
+//			m_sollspeeds[1] = 0;
+			break;
+
+		}
+
+	}
+
+	clear();
+	printw("SollGeschw. ist: %f %f", m_sollspeeds[0], m_sollspeeds[1]);
+
+	}
+	m_sollspeeds[0] = 0;
+	m_sollspeeds[1] = 0;
+	printw("SollGeschw. ist: %f %f . Wagen haelt.", m_sollspeeds[0], m_sollspeeds[1]);
+
+	while (1)
+	{
+		if (m_istspeeds[0] != 0 || m_istspeeds[1] != 0)
+		{
+			m_sollspeeds[0] = 0;
+			m_sollspeeds[1] = 0;
+		}
+		else
+		{break;}
+	}
+
+	endwin();
+}
