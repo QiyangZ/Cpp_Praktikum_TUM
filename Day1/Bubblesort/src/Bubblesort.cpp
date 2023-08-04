@@ -48,5 +48,6 @@ for (int k=0; k<31; k++)
 {
 cout << array[k]<<",";
 }
+delete array;
 return 0;
 }
