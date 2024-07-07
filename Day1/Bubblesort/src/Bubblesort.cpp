@@ -10,8 +10,8 @@
 // a) Then implement a function that orders a one-dimensional int array. The array
 //   and the size are passed as parameters.
 // b) Write a main function that creates an int array of size 32 on the heap
-//   (dynamic memory management), fills it with random numbers (see note above)
-//   and sorts it using the function implemented in a).
+//   (dynamic memory management), fill it with random numbers (see note above)
+//   and sort it using the function implemented in a).
 // c) Think about the efficiency of this sorting algorithm.
 //============================================================================
 
